@@ -4,39 +4,37 @@
 classDiagram
 
 class Cuenta {
-    #float saldo
-    #int numeroConsignaciones
-    #int numeroRetiros
-    #float tasaAnual
-    #float comisionMensual
-
+    #saldo : float
+    #numeroConsignaciones : int
+    #numeroRetiros : int
+    #tasaAnual : float
+    #comisionMensual : float
     +Cuenta(float saldo, float tasaAnual)
-    +consignar(float cantidad)
-    +retirar(float cantidad)
-    +calcularInteres()
-    +extractoMensual()
-    +imprimir()
+    +consignar(float cantidad) void
+    +retirar(float cantidad) void
+    +calcularInteres() void
+    +extractoMensual() void
+    +imprimir() void
 }
 
 class CuentaAhorros {
-    -boolean activa
-
+    -activa : boolean
     +CuentaAhorros(float saldo, float tasaAnual)
-    +consignar(float cantidad)
-    +retirar(float cantidad)
-    +extractoMensual()
-    +imprimir()
+    +consignar(float cantidad) void
+    +retirar(float cantidad) void
+    +extractoMensual() void
+    +imprimir() void
 }
 
 class CuentaCorriente {
-    -float sobregiro
-
+    -sobregiro : float
     +CuentaCorriente(float saldo, float tasaAnual)
-    +consignar(float cantidad)
-    +retirar(float cantidad)
-    +extractoMensual()
-    +imprimir()
+    +consignar(float cantidad) void
+    +retirar(float cantidad) void
+    +extractoMensual() void
+    +imprimir() void
 }
 
 Cuenta <|-- CuentaAhorros
 Cuenta <|-- CuentaCorriente
+```
