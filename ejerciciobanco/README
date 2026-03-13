@@ -1,38 +1,38 @@
-## Diagrama de Clases
+## Diagrama de clases (Mermaid)
 
 ```mermaid
 classDiagram
 
 class Cuenta {
-    #saldo : float
-    #numeroConsignaciones : int
-    #numeroRetiros : int
-    #tasaAnual : float
-    #comisionMensual : float
+    #float saldo
+    #int numeroConsignaciones
+    #int numeroRetiros
+    #float tasaAnual
+    #float comisionMensual
     +Cuenta(float saldo, float tasaAnual)
-    +consignar(float cantidad) void
-    +retirar(float cantidad) void
-    +calcularInteres() void
-    +extractoMensual() void
-    +imprimir() void
+    +void consignar(float cantidad)
+    +void retirar(float cantidad)
+    +void calcularInteres()
+    +void extractoMensual()
+    +void imprimir()
 }
 
 class CuentaAhorros {
-    -activa : boolean
+    -boolean activa
     +CuentaAhorros(float saldo, float tasaAnual)
-    +consignar(float cantidad) void
-    +retirar(float cantidad) void
-    +extractoMensual() void
-    +imprimir() void
+    +void consignar(float cantidad)
+    +void retirar(float cantidad)
+    +void extractoMensual()
+    +void imprimir()
 }
 
 class CuentaCorriente {
-    -sobregiro : float
+    -float sobregiro
     +CuentaCorriente(float saldo, float tasaAnual)
-    +consignar(float cantidad) void
-    +retirar(float cantidad) void
-    +extractoMensual() void
-    +imprimir() void
+    +void consignar(float cantidad)
+    +void retirar(float cantidad)
+    +void extractoMensual()
+    +void imprimir()
 }
 
 Cuenta <|-- CuentaAhorros
